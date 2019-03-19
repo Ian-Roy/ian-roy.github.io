@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>All about poekmon</title>
+        <meta name="description" content="pokmon stats analysis">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css"> 
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4" >
+                    <fieldset id="genFilter"></fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <table class="table table-striped col-md-4 col-sm-3 col-lg-6">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th id="idCol" scope="col" onclick="sortByCol = 'id';sortAndFilter(getSelectedFilterOptions(), 'id');">id#</th>
+                                <th id="nameCol" scope="col" onclick="sortByCol = 'name';sortAndFilter(getSelectedFilterOptions(), 'name');">name</th>
+                                <th id="type1Col" scope="col" onclick="sortByCol = 'type1';sortAndFilter(getSelectedFilterOptions(), 'type1');">type1</th>
+                                <th id="type2Col" scope="col" onclick="sortByCol = 'type2';sortAndFilter(getSelectedFilterOptions(), 'type2');">type2</th>
+                                <th id="genCol" scope="col" onclick="sortByCol = 'gen';sortAndFilter(getSelectedFilterOptions(), 'gen');">gen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>  
+                <svg class="col-lg-6"></svg>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+        <script src="data/pokemonData.js"></script>
+        <script src="js/dataCleanup.js"></script>
+        <script src="js/pokemonDataVis.js"></script>
+    </body>
+</html>
