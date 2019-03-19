@@ -14,8 +14,9 @@ var options = filterGroup.selectAll("lable")
 var sortByCol = 'id';
 
 $(".filter").click(function(){
-
-    sortAndFilter(getSelectedFilterOptions(), sortByCol);
+    finalData = filterData(getSelectedFilterOptions(), sortData(sortByCol));
+    buildDataTable(finalData);
+    buildTypeCountChart(finalData);
 });
 
 function getSelectedFilterOptions(){
@@ -24,12 +25,15 @@ function getSelectedFilterOptions(){
     return fl
 }
 
-function sortAndFilter(filterList,sortCol){
+function sortData(sortCol){
     sortedData=dataset.slice(0);
     sortedData.sort((a,b) => a[sortCol]<b[sortCol] ? -1 : a[sortCol] > b[sortCol] ? 1 : 0 );
+    return sortedData
+}
+
+function filterData(filterList, sortedData){
     var filterData = sortedData.filter(d => filterList.includes(d.gen) );
-    buildDataTable(filterData);
-    buildTypeCountChart(filterData);
+    return filterData
 }
 
 function buildDataTable(filterData){
@@ -130,4 +134,6 @@ function buildTypeCountChart(filterData){
 
 
 //INIT calls 
-sortAndFilter(genList, sortByCol);
+finalData = filterData(genList, sortData(sortByCol));
+    buildDataTable(finalData);
+    buildTypeCountChart(finalData);

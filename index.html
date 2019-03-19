@@ -22,11 +22,11 @@
                         <thead>
                             <tr>
                                 <th scope="col"></th>
-                                <th id="idCol" scope="col" onclick="sortByCol = 'id';sortAndFilter(getSelectedFilterOptions(), 'id');">id#</th>
-                                <th id="nameCol" scope="col" onclick="sortByCol = 'name';sortAndFilter(getSelectedFilterOptions(), 'name');">name</th>
-                                <th id="type1Col" scope="col" onclick="sortByCol = 'type1';sortAndFilter(getSelectedFilterOptions(), 'type1');">type1</th>
-                                <th id="type2Col" scope="col" onclick="sortByCol = 'type2';sortAndFilter(getSelectedFilterOptions(), 'type2');">type2</th>
-                                <th id="genCol" scope="col" onclick="sortByCol = 'gen';sortAndFilter(getSelectedFilterOptions(), 'gen');">gen</th>
+                                <th id="idCol" scope="col" onclick="buildDataTable(filterData(getSelectedFilterOptions(), sortData('id')));">id#</th>
+                                <th id="nameCol" scope="col" onclick="buildDataTable(filterData(getSelectedFilterOptions(), sortData('name')));">name</th>
+                                <th id="type1Col" scope="col" onclick="buildDataTable(filterData(getSelectedFilterOptions(), sortData('type1')));">type1</th>
+                                <th id="type2Col" scope="col" onclick="buildDataTable(filterData(getSelectedFilterOptions(), sortData('type2')));">type2</th>
+                                <th id="genCol" scope="col" onclick="buildDataTable(filterData(getSelectedFilterOptions(), sortData('gen')));">gen</th>
                             </tr>
                         </thead>
                         <tbody>
