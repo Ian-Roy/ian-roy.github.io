@@ -53,48 +53,8 @@ function setColorByType(type){
     return typeColorObj[type]
 
 }
-function buildTypeCountChart(filterData){
 
-    const margin = 60;
-    const width = 1000 - 2 * margin;
-    const height = 600 - 2 * margin;
-
-    var x = d3.scaleLinear().domain([0, 200]);
-    var y = d3.scaleLinear().range([height, 0]);
-
-// var xAxis = d3.axisBottom()
-//     .scale(x);
-// var yAxis = d3.axisLeft()
-//     .scale(y)
-//     .ticks(10);
-
-    const svg = d3.select('svg')
-        .attr("width", width + margin + margin)
-        .attr("height", height + margin + margin);
-
-    const chart = svg.append('g')
-        .attr('transform', `translate(${margin}, ${margin})`);
-
-// svg.append("g")
-//     .attr("class", "x axis")
-//     .attr("transform", "translate(0," + height + ")")
-//     .call(xAxis)
-//   .selectAll("text")
-//     .style("text-anchor", "end")
-//     .attr("dx", "-.8em")
-//     .attr("dy", "-.55em")
-//     .attr("transform", "rotate(-90)" );
-
-// svg.append("g")
-//     .attr("class", "y axis")
-//     .call(yAxis)
-//   .append("text")
-//     .attr("transform", "rotate(-90)")
-//     .attr("y", 6)
-//     .attr("dy", ".71em")
-//     .style("text-anchor", "end")
-//     .text("Value ($)");
-
+function getCountByTypeList(filterData){
     typeCount = { }
     filterData.forEach(row => {
         if(typeCount[row.type1]){
@@ -115,11 +75,38 @@ function buildTypeCountChart(filterData){
     finalTypeList=[];
     Object.keys(typeCount).forEach(k => finalTypeList.push({"type":k,"val":typeCount[k]}));
     console.log(finalTypeList);
+    return finalTypeList
+}
+
+function buildTypeCountChart(filterData){
+
+    const margin = 60;
+    const width = 1000 - 2 * margin;
+    const height = 600 - 2 * margin;
+
+    var x = d3.scaleBand()
+    .domain(filterData.map(d => d.name))
+    .range([margin.left, width - margin])
+    .padding(0.1)
+
+    xAxis = g => g
+    .attr("transform", `translate(0,${height - margin})`)
+    .call(d3.axisBottom(x).tickSizeOuter(0))
+    
+    var y = d3.scaleLinear().range([height, 0]);
+
+
+    const svg = d3.select('svg')
+        .attr("width", width + margin + margin)
+        .attr("height", height + margin + margin);
+
+
+    finalTypeList = getCountByTypeList(filterData)
     svg.selectAll("bar")
         .data(finalTypeList)
         .enter()
         .append("rect")
-        .merge(svg)
+        .merge(svg) 
         .style("fill", d => setColorByType(d.type))
         .attr("x", d => 20 * finalTypeList.indexOf(d))
         .text(d => d.type)
@@ -135,5 +122,5 @@ function buildTypeCountChart(filterData){
 
 //INIT calls 
 finalData = filterData(genList, sortData(sortByCol));
-    buildDataTable(finalData);
-    buildTypeCountChart(finalData);
+buildDataTable(finalData);
+buildTypeCountChart(finalData);
