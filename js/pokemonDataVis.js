@@ -96,17 +96,20 @@ function buildTypeCountChart(filterData) {
     var y = d3.scaleLinear()
         .domain([0, d3.max(finalTypeList, d => d.val)])
         .range([height, 0]);
-    var bars = svg.selectAll("bar")
+
+    var bars = svg.selectAll("rect")
         .data(finalTypeList);
+
     bars.enter()
         .append("rect")
         .merge(bars)
         .style("fill", d => setColorByType(d.type))
         .attr("x", d => x(d.type))
         .text(d => d.type)
-        .attr("width", 15)
+        .attr("width", x.bandwidth())
         .attr("y", d => y(d.val))
         .attr("height", d => height - y(d.val));
+
     bars.exit().remove();
 
 
