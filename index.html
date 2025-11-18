@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <title>Resume</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,69 +19,95 @@
 # Ian Roy  
 
 ## Summary
-With 10 years of experience in Computer Science, I bring a diverse skill set in Data Engineering, Software Engineering, DevOps, and Education. I am committed to leveraging technology to solve complex problems while educating aspiring developers. 
+Senior DevOps and software engineer with 10 years of experience building and operating production systems, CI/CD pipelines, and data platforms. I specialize in security-conscious automation, authentication, and large-scale web integrations, including work on applications integrated with the MLB Ballpark platform for the Cleveland Guardians. I frequently serve as a security champion on engineering teams, participating in audits, vulnerability remediation, and secure coding efforts, while mentoring developers and analysts.
+
+## Security & DevSecOps Experience
+- Acted as a **security champion** across multiple engineering teams, helping drive a “security is everyone’s responsibility” culture.
+- Participated in numerous **security audits** (internal and external) of closed-source and open-source code, and implemented remediation for identified issues.
+- Implemented **vulnerability scanning in Datadog** for production applications, tuning alerts and collaborating with developers to triage and remediate findings.
+- Implemented and maintained **GitHub Dependabot** to track and remediate vulnerabilities in Node.js and other third-party dependencies.
+- Strong practical knowledge of the **OWASP Top 10**; implemented fixes for common web application vulnerabilities (e.g., injection, XSS, authentication/authorization issues, sensitive data exposure) during security reviews and audits.
+- Extensive background building **web automation and scraping tools** in highly adversarial environments, gaining deep understanding of modern **bot detection and mitigation techniques** (e.g., reCAPTCHA, canvas fingerprinting, behavioral analysis of keyboard/mouse interactions).
+- Experience with **authentication and IAM** through implementation of Microsoft Entra (Azure AD) for secure access to applications and services.
+- Academic background in **cryptography and mathematics**, including research projects on RSA encryption and ElGamal digital signatures.
 
 ## Skills
 <table border="1">
-<tr><td>Languages</td><td> SQL, Python, MongoDB, JavaScript, Bash, PowerShell, HTML, CSS </td></tr>
-<tr><td>Frameworks</td> <td> Jupyter, Pandas, Selenium, Flask, Dask, D3, Vue </td></tr>
-<tr><td>Software</td><td> Git, AWS, Microsoft Excel, Docker, AirFlow, Jenkins </td></tr>
+<tr>
+  <td>Security & DevSecOps</td>
+  <td>Security audits, OWASP Top 10, Datadog SAST scanning, GitHub Dependabot, Microsoft Entra (Azure AD), secure coding practices, bot detection & evasion awareness (reCAPTCHA, canvas fingerprinting, behavioral analysis)</td>
+</tr>
+<tr>
+  <td>Languages</td>
+  <td>SQL, Python, JavaScript, Bash, PowerShell, HTML, CSS, C#</td>
+</tr>
+<tr>
+  <td>Frameworks & Libraries</td>
+  <td>Jupyter, Pandas, Selenium, Flask, Dask, D3, Vue</td>
+</tr>
+<tr>
+  <td>Platforms & Tools</td>
+  <td>Git, Docker, AirFlow, Jenkins, Redis, Datadog, Microsoft Excel</td>
+</tr>
 </table>
+
 ## Working Experience
 
 #### [Cleveland Guardians](https://www.mlb.com/guardians), Cleveland OH  (DevOps Engineer, 2021/08 - present) 
-* Troubleshoot and triage issues detected with automation
-* Build custom web application code for integration with MLB ballpark application
-* Implement Microsoft Entra for authentication 
-* Build automated code deployment pipelines
-* Drive a culture of pull request drive code reviews
-* Mentor data analysts on best practices 
+* Build and maintain automated CI/CD pipelines for web applications, improving deployment reliability and enabling rapid, safe releases for fan-facing platforms integrated with the **MLB Ballpark application**.
+* Created **automated tests** (integrated into CI/CD) to verify authentication functionality was not altered.
+* Implement **Microsoft Entra (Azure AD)** for authentication in web applications
+* Implement **Static Application Security Testing** for key applications, working with developers to triage and remediate findings.
+* Participate in **security audits and code reviews** for applications that integrate with MLB and TDC services.
+* Troubleshoot and triage issues detected by automation and monitoring systems.
+* Drive a culture of pull-request-driven code reviews and **secure coding practices**
+*  mentor teammates on engineering and DevOps best practices.
 
 #### [CWRU Data Analytics Boot Camp](https://bootcamp.case.edu/data/), Cleveland OH  (Instructor, 2018/08 - 2021/01) 
-* Instructed students on best practices in data visualization, engineering, and, analysis 
-* Managed Git repository of sample code 
-* Conducted one on one tutoring 
-* Created supplemental lessons on topics outside the scope of the course 
+* Instructed students on best practices in data visualization, engineering, and analysis
+* Managed Git repositories of sample code, demonstrating version control and collaboration workflows.
+* Conducted one-on-one tutoring sessions to support student learning across a wide range of technical backgrounds.
+* Created supplemental lessons on topics outside the core curriculum to help students connect data science concepts to applications outside the classroom
 
-#### [TPA stream](https://www.tpastream.com/), Cleveland OH  (Data Engineer, 2019/06 - 2021/08)
-* Built tools to help with web spider development 
-* Mentored junior engineers on best practices 
-* Worked to avoid and mitigate bot detection software 
-* Setup and maintain API integrations for many data sources 
-* Ensure data encryption is working correctly and adheres to best practices 
-* Troubleshoot data related issues for customers 
+#### [TPA Stream](https://www.tpastream.com/), Cleveland OH  (Data Engineer, 2019/06 - 2021/08)
+* Built tools to support development of web spiders and automated data collection tools in environments using bot detection and anti-abuse mechanisms, gaining deep insight into modern bot defenses.
+* Worked with stakeholders to design reliable and compliant scraping solutions for numerous data sources, including APIs and web interfaces.
+* Implemented and maintained **API integrations** for a variety of external data providers, ensuring secure authentication and data transfer.
+* Ensured **data encryption in transit and at rest** was configured correctly and adhered to best practices, and validated these configurations during security and compliance reviews.
+* Mentored junior engineers on coding best practices.
+* Troubleshot complex data-related issues for customers, including edge cases driven by changes in upstream systems or integrations.
 
-#### [On Shift](https://www.onshift.com/), Cleveland OH  (Software Engineer, 2018/08 - 2019/06)
-* Refactored code to use a single user data model
-* Troubleshoot data issues with migration to new user model
-* Standardized business analytics efforts across the company
-* Created unit and integration tests for all new code 
+#### [OnShift](https://www.onshift.com/), Cleveland OH  (Software Engineer, 2018/08 - 2019/06)
+* Refactored application code to support a **single, unified user data model**, improving maintainability and scalability.
+* Troubleshot data issues related to migration into the new user model, ensuring data integrity while minimizing customer impact.
+* Standardized business analytics efforts across the company by aligning data sources and definitions.
+* Created unit and integration tests for all new code, helping support reliable and repeatable deployments.
 
 #### [Asurint](https://www.asurint.com/), Cleveland, OH (Software Engineer, 2017/05 - 2018/07)
-* Created a Python CI/CD pipeline in Jenkins for production code deployments 
-* Created and maintained PhantomJS/NodeJS web spiders  
-* Worked to avoid and mitigate bot detection software 
-* Extracted data from various data sources such as PDF and image files 
-* Created Docker containers for cloud deployments as a microservice 
+* Created a **Python-based CI/CD pipeline in Jenkins** for production code deployments, enabling automated builds, tests, and deployments.
+* Created and maintained PhantomJS/Node.js web spiders that operated against sites with sophisticated **bot detection mechanisms**, developing a strong understanding of techniques such as reCAPTCHA, canvas fingerprinting, and behavioral analysis.
+* Applied this adversarial experience to help design more resilient automation and to inform evaluation of anti-bot and anti-fraud controls.
+* Extracted data from various data sources such as PDF and image files, implementing robust parsing and validation.
+* Created Docker containers for cloud deployments as microservices, supporting scalable and modular architectures.
 
 #### [Dakota Software](https://www.dakotasoft.com/), Cleveland, OH  (Full Stack Web Developer, 2014/06 - 2017/05)
-* Developed an advanced .NET application for calculating air pollutant emissions 
-* Created a Python ETL system to process large scale data imports for customers  
-* Built a SQL system to share common chemical information between customers
-* Handled code deployments to production environment using Jenkins
-* Built tools to streamline copying MSSQL databases to different environments 
-* Created a tool for automating the testing process using Selenium and Python 
-* Developed a Python system to scrape regulatory data from government websites 
+* Developed an advanced .NET application for calculating air pollutant emissions, handling complex business logic and regulatory requirements.
+* Created a Python ETL system to process large-scale data imports for customers, focusing on reliability and data quality.
+* Built a SQL-based system to share common chemical information between customers while maintaining appropriate data separation.
+* Handled code deployments to production environments using Jenkins, following established change-control and review processes.
+* Built tools to streamline copying MSSQL databases between environments for testing and troubleshooting.
+* Created a tool for automating regression testing using Selenium and Python, increasing confidence in releases.
+* Developed a Python system to scrape regulatory data from government websites, ensuring accurate and up-to-date data for compliance workflows.
 
-## RELEVANT RESEARCH
-* A study of [RSA encryption](https://drive.google.com/open?id=0B70-JHjvGhumQ1NncTNjN1djdjQ) 
-* A discussion of [digital signatures using ElGamal](https://drive.google.com/open?id=0B70-JHjvGhumRFJxcFR2UlJ3bTA)
+## Relevant Research
+* A study of [RSA encryption](https://drive.google.com/open?id=0B70-JHjvGhumQ1NncTNjN1djdjQ), exploring key generation, modular arithmetic, and attack surfaces in practical implementations.
+* A discussion of [digital signatures using ElGamal](https://drive.google.com/open?id=0B70-JHjvGhumRFJxcFR2UlJ3bTA), examining security properties and use in authentication and non-repudiation.
 
 ## Education 
-Cleveland State University 2017  
-*Bachelor of Science*, Mathematics,  
-*Minor* Computer Science  
+Cleveland State University, 2017  
+*Bachelor of Science*, Mathematics (including coursework in number theory and cryptography)  
+*Minor*, Computer Science  
 
 <br>
- <hr>
+<hr>
 <br>
